@@ -1,0 +1,41 @@
+local Plr = game.Players.LocalPlayer
+
+local GUI = Instance.new("ScreenGui",game:FindFirstChild("CoreGui"))
+local Frame = Instance.new("Frame",GUI)
+local UICorner = Instance.new("UICorner",Frame)
+
+local TextBox = Instance.new("TextBox",Frame)
+local UICorner = Instance.new("UICorner",TextBox)
+
+local ConfirmButton = Instance.new("TextButton",Frame)
+local UICorner = Instance.new("UICorner",ConfirmButton)
+
+local Title = Instance.new("TextLabel",Frame)
+Title.Size = UDim2.new(1,0,0.1,0)
+Title.BackgroundTransparency = 1
+Title.TextScaled = true
+Title.Text = "Bizzare Hub"
+
+Frame.Size = UDim2.new(0.2,0,0.6,0)
+Frame.Position = UDim2.new(0.4,0,0.2,0)
+Frame.BackgroundColor3 = Color3.new(0.72549, 0.72549, 0.72549)
+Frame.BorderSizePixel = 5
+Frame.BorderColor3 = Color3.new(0.603922, 0.152941, 1)
+
+TextBox.Position = UDim2.new(0.196, 0,0.17, 0)
+TextBox.Size = UDim2.new(0.6,0,0.1,0)
+TextBox.BackgroundColor3 = Color3.new(0.647059, 0.647059, 0.647059)
+TextBox.PlaceholderText = "Password"
+TextBox.Text = ""
+TextBox.PlaceholderColor3 = Color3.new(0.435294, 0.435294, 0.435294)
+
+ConfirmButton.Position = UDim2.new(0.202,0,0.777,0)
+ConfirmButton.Size = UDim2.new(0.613,0,0.1,0)
+ConfirmButton.TextScaled = true
+ConfirmButton.Text = "Confirm"
+
+ConfirmButton.MouseButton1Down:Connect(function()
+	if TextBox.Text == "1234" then
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/fusiongreg/BoltsHubV5/main/Main", true))()
+	end
+end)
