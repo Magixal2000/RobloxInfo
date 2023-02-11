@@ -1,38 +1,63 @@
 local Plr = game.Players.LocalPlayer
 
 local GUI = Instance.new("ScreenGui",game:FindFirstChild("CoreGui"))
+
+local BackgroundFrame1 = Instance.new("Frame",GUI)
+BackgroundFrame1.Position = UDim2.new(0.4,0,0.341,0)
+BackgroundFrame1.Size = UDim2.new(0.2,0,0.247,0)
+BackgroundFrame1.BackgroundColor3 = Color3.new(0,0,0)
+BackgroundFrame1.ZIndex = 1
+local UICorner = Instance.new("UICorner",BackgroundFrame1)
+
+local BackgroundFrame2 = Instance.new("Frame",GUI)
+BackgroundFrame2.Position = UDim2.new(0.404,0,0.348,0)
+BackgroundFrame2.Size = UDim2.new(0.191,0,0.232,0)
+BackgroundFrame2.BackgroundColor3 = Color3.new(0.282353, 0, 0.254902)
+BackgroundFrame2.ZIndex = 2
+local UICorner = Instance.new("UICorner",BackgroundFrame2)
+
 local Frame = Instance.new("Frame",GUI)
 local UICorner = Instance.new("UICorner",Frame)
+
+Frame.Size = UDim2.new(0.185,0,0.219,0)
+Frame.Position = UDim2.new(0.408,0,0.354,0)
+Frame.BackgroundColor3 = Color3.new(0, 0, 0)
+Frame.ZIndex = 4
 
 local TextBox = Instance.new("TextBox",Frame)
 local UICorner = Instance.new("UICorner",TextBox)
 
+TextBox.Position = UDim2.new(0.039, 0,0.263, 0)
+TextBox.Size = UDim2.new(0.92,0,0.259,0)
+TextBox.BackgroundColor3 = Color3.new(0.282353, 0, 0.254902)
+TextBox.PlaceholderText = "Password"
+TextBox.Text = ""
+TextBox.PlaceholderColor3 = Color3.new(0, 0, 0)
+TextBox.TextScaled = true
+TextBox.ZIndex = 4
+
 local ConfirmButton = Instance.new("TextButton",Frame)
 local UICorner = Instance.new("UICorner",ConfirmButton)
 
-local Title = Instance.new("TextLabel",Frame)
-Title.Size = UDim2.new(1,0,0.1,0)
-Title.BackgroundTransparency = 1
-Title.TextScaled = true
-Title.Text = "Bizzare Hub"
-
-Frame.Size = UDim2.new(0.2,0,0.6,0)
-Frame.Position = UDim2.new(0.4,0,0.2,0)
-Frame.BackgroundColor3 = Color3.new(0.72549, 0.72549, 0.72549)
-Frame.BorderSizePixel = 5
-Frame.BorderColor3 = Color3.new(0.603922, 0.152941, 1)
-
-TextBox.Position = UDim2.new(0.196, 0,0.17, 0)
-TextBox.Size = UDim2.new(0.6,0,0.1,0)
-TextBox.BackgroundColor3 = Color3.new(0.647059, 0.647059, 0.647059)
-TextBox.PlaceholderText = "Password"
-TextBox.Text = ""
-TextBox.PlaceholderColor3 = Color3.new(0.435294, 0.435294, 0.435294)
-
-ConfirmButton.Position = UDim2.new(0.202,0,0.777,0)
+ConfirmButton.Position = UDim2.new(0.192,0,0.612,0)
 ConfirmButton.Size = UDim2.new(0.613,0,0.1,0)
+ConfirmButton.BackgroundColor3 = Color3.new(0.282353, 0, 0.254902)
 ConfirmButton.TextScaled = true
 ConfirmButton.Text = "Confirm"
+ConfirmButton.Font = Enum.Font.Arial
+ConfirmButton.ZIndex = 4
+
+local Title = Instance.new("TextLabel",Frame)
+
+Title.ZIndex = 5
+Title.Size = UDim2.new(1,0,0.14,0)
+Title.Position = UDim2.new(0,0,0.066,0)
+Title.BackgroundTransparency = 1
+Title.TextScaled = true
+Title.Text = "BIZARRE'S SCRIPT HUB"
+Title.FontFace = Enum.Font.FredokaOne
+Title.TextColor3 = Color3.new(72, 0, 65)
+
 
 ConfirmButton.MouseButton1Down:Connect(function()
 	if TextBox.Text == "1234" then
