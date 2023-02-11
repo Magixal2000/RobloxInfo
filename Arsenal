@@ -36,6 +36,7 @@ ConfirmButton.Text = "Confirm"
 
 ConfirmButton.MouseButton1Down:Connect(function()
 	if TextBox.Text == "1234" then
+		Frame.Visible = false
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/fusiongreg/BoltsHubV5/main/Main", true))()
 	end
 end)
