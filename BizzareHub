@@ -452,6 +452,8 @@ Title_6.TextColor3 = Color3.fromRGB(124, 32, 124)
 Title_6.TextScaled = true
 Title_6.TextWrapped = true
 
+SupportedGameFrame.Visible = false
+
 Confirm.MouseButton1Down:Connect(function()
 	if Password.Text == "1234" then
 		if game.PlaceId == 142823291 then
@@ -504,6 +506,8 @@ Confirm.MouseButton1Down:Connect(function()
 			loadstring(game:HttpGet("https://realzzhub.xyz/script.lua"))()
 		elseif game.PlaceId == 4588604953 then
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/JackHiggly/RobloxThings/main/FemWare0", true))()
+		else
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/fusiongreg/BoltsHubV5/main/Main",true))
 		end
 	end
 end)
