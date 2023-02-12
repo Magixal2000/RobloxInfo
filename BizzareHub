@@ -507,3 +507,7 @@ Confirm.MouseButton1Down:Connect(function()
 		end
 	end
 end)
+
+SupportedGames.MouseButton1Down:Connect(function()
+	SupportedGameFrame.Visible = not SupportedGameFrame.Visible
+end)
