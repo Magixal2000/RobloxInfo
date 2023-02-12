@@ -1,6 +1,11 @@
 local Plr = game.Players.LocalPlayer
+local Gui = nil
 
-local GUI = Instance.new("ScreenGui",game:FindFirstChild("CoreGui"))
+if game:GetService("RunService"):IsStudio() then
+	GUI = Instance.new("ScreenGui",Plr:FindFirstChild("PlayerGui"))
+else
+	GUI = Instance.new("ScreenGui",game:FindFirstChild("CoreGui"))
+end
 
 local BackgroundFrame1 = Instance.new("Frame",GUI)
 BackgroundFrame1.Position = UDim2.new(0.4,0,0.341,0)
@@ -55,13 +60,20 @@ Title.Position = UDim2.new(0,0,0.066,0)
 Title.BackgroundTransparency = 1
 Title.TextScaled = true
 Title.Text = "BIZARRE'S SCRIPT HUB"
-Title.FontFace = Enum.Font.FredokaOne
+Title.FontFace = Font.fromEnum(Enum.Font.FredokaOne)
 Title.TextColor3 = Color3.new(72, 0, 65)
 
 
 ConfirmButton.MouseButton1Down:Connect(function()
 	if TextBox.Text == "1234" then
 		Frame.Visible = false
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/fusiongreg/BoltsHubV5/main/Main", true))()
+		BackgroundFrame1.Visible = false
+		BackgroundFrame2.Visible = false
+		if game.PlaceId == 286090429 then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/fusiongreg/BoltsHubV5/main/Main", true))()
+		else
+			local Message = Instance.new("Message",workspace)
+			Message.Text = "Game isn't supported with a cheat"
+		end
 	end
 end)
