@@ -462,56 +462,61 @@ Confirm.MouseButton1Down:Connect(function()
 			MM2OptionsFrame.Visible = true
 			BoltsHub.MouseButton1Down:Connect(function()
 				loadstring(game:HttpGet(('https://raw.githubusercontent.com/fusiongreg/BoltsHubV5/main/MM2'),true))() 
-				BizzareHub:Destroy()
+				BizzareHub.Enabled = false
 			end)
 
 			EclipseHub.MouseButton1Down:Connect(function()
 				--getgenv().mainKey = "nil" local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or (syn and syn.request),assert,tostring,"https://api.eclipsehub.xyz/auth"c(a and b,"Executor not Supported")a(b({Url=e.."\?\107e\121\61"..d(mainKey),Headers={["User-Agent"]="Eclipse"}}).Body)()
-				BizzareHub:Destroy()
+				BizzareHub.Enabled = false
 			end)
 		elseif game.PlaceId == 292439477 then
 			PhantomForcesOptionsFrame.Visible = true
 			BoltsHub_2.MouseButton1Down:Connect(function()
 				loadstring(game:HttpGet(('https://raw.githubusercontent.com/fusiongreg/BoltsHubV5/main/PhantomForces'),true))()
-				BizzareHub:Destroy()
+				BizzareHub.Enabled = false
 			end)
 
 			GHub.MouseButton1Down:Connect(function()
 				loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub%27'))()
-				BizzareHub:Destroy()
+				BizzareHub.Enabled = false
 			end)
 		elseif game.PlaceId == 621129760 then
 			KatOptionsFrame.Visible = true
 			BoltsHub_3.MouseButton1Down:Connect(function()
 				loadstring(game:HttpGet(('https://raw.githubusercontent.com/fusiongreg/BoltsHubV5/main/KAT'),true))() 
-				BizzareHub:Destroy()
+				BizzareHub.Enabled = false
 			end)
 
 			Kat12.MouseButton1Down:Connect(function()
 				loadstring(game:HttpGet("https://raw.githubusercontent.com/JNHHGaming/Kat12/main/Kat"))()
-				BizzareHub:Destroy()
+				BizzareHub.Enabled = false
 			end)
 		elseif game.PlaceId == 2788229376 then
 			DaHoodOptionFrame.Visible = true
 			BoltsHub_4.MouseButton1Down:Connect(function()
 				loadstring(game:HttpGet(('https://raw.githubusercontent.com/fusiongreg/BoltsHubV5/main/Da%20Hood'),true))()  
-				BizzareHub:Destroy()
+				BizzareHub.Enabled = false
 			end)
 
 			DimagX.MouseButton1Down:Connect(function()
 				loadstring(game:HttpGet('https://raw.githubusercontent.com/Dimag16/DimagX_NEW/main/dimagx', true))()
-				BizzareHub:Destroy()
+				BizzareHub.Enabled = false
 			end)
 		elseif game.PlaceId == 6516141723 or game.GameId == 6516141723 then
 			loadstring(game:HttpGet("https://pastebin.com/raw/ZNMP76Ys"))()
+			BizzareHub.Enabled = false
 		elseif game.PlaceId == 2413927524 then
 			loadstring(game:HttpGet("https://realzzhub.xyz/script.lua"))()
+			BizzareHub.Enabled = false
 		elseif game.PlaceId == 4588604953 then
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/JackHiggly/RobloxThings/main/FemWare0", true))()
+			BizzareHub.Enabled = false
 		elseif game.PlaceId == 286090429 then
 			loadstring(game:HttpGet(('https://raw.githubusercontent.com/fusiongreg/BoltsHubV5/main/Arsenal2'),true))()
+			BizzareHub.Enabled = false
 		else
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/fusiongreg/BoltsHubV5/main/Main",true))
+			BizzareHub.Enabled = false
 		end
 	end
 end)
