@@ -454,12 +454,6 @@ Title_6.TextWrapped = true
 
 SupportedGameFrame.Visible = false
 
-PasswordFrame.ZIndex = 12
-DaHoodOptionFrame.ZIndex = 11
-KatOptionsFrame.ZIndex = 11
-MM2OptionsFrame.ZIndex = 11
-PhantomForcesOptionsFrame.ZIndex = 11
-
 Confirm.MouseButton1Down:Connect(function()
 	print("Yes1")
 	if Password.Text == "1234" then
