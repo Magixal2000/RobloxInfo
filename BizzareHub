@@ -1,11 +1,8 @@
 local Plr = game.Players.LocalPlayer
 local Gui = nil
 
-if game:GetService("RunService"):IsStudio() then
-	GUI = Instance.new("ScreenGui",Plr:FindFirstChild("PlayerGui"))
-else
-	GUI = Instance.new("ScreenGui",game:FindFirstChild("CoreGui"))
-end
+GUI = Instance.new("ScreenGui",game:FindFirstChild("CoreGui"))
+
 
 local BackgroundFrame1 = Instance.new("Frame",GUI)
 BackgroundFrame1.Position = UDim2.new(0.4,0,0.341,0)
