@@ -455,7 +455,9 @@ Title_6.TextWrapped = true
 SupportedGameFrame.Visible = false
 
 Confirm.MouseButton1Down:Connect(function()
+	print("Yes1")
 	if Password.Text == "1234" then
+		print("Yes2")
 		if game.PlaceId == 142823291 then
 			MM2OptionsFrame.Visible = true
 			BoltsHub.MouseButton1Down:Connect(function()
@@ -464,7 +466,7 @@ Confirm.MouseButton1Down:Connect(function()
 			end)
 
 			EclipseHub.MouseButton1Down:Connect(function()
-				getgenv().mainKey = "nil" local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or (syn and syn.request),assert,tostring,"https://api.eclipsehub.xyz/auth"c(a and b,"Executor not Supported")a(b({Url=e.."\?\107e\121\61"..d(mainKey),Headers={["User-Agent"]="Eclipse"}}).Body)()
+				--getgenv().mainKey = "nil" local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or (syn and syn.request),assert,tostring,"https://api.eclipsehub.xyz/auth"c(a and b,"Executor not Supported")a(b({Url=e.."\?\107e\121\61"..d(mainKey),Headers={["User-Agent"]="Eclipse"}}).Body)()
 				BizzareHub:Destroy()
 			end)
 		elseif game.PlaceId == 292439477 then
@@ -506,6 +508,8 @@ Confirm.MouseButton1Down:Connect(function()
 			loadstring(game:HttpGet("https://realzzhub.xyz/script.lua"))()
 		elseif game.PlaceId == 4588604953 then
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/JackHiggly/RobloxThings/main/FemWare0", true))()
+		elseif game.PlaceId == 286090429 then
+			loadstring(game:HttpGet(('https://raw.githubusercontent.com/fusiongreg/BoltsHubV5/main/Arsenal2'),true))()
 		else
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/fusiongreg/BoltsHubV5/main/Main",true))
 		end
