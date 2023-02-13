@@ -1,3 +1,8 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
 local BizzareHub = Instance.new("ScreenGui")
 local PasswordFrame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -18,11 +23,14 @@ local Game_4 = Instance.new("TextLabel")
 local Game_5 = Instance.new("TextLabel")
 local Game_6 = Instance.new("TextLabel")
 local Game_7 = Instance.new("TextLabel")
+local Game_8 = Instance.new("TextLabel")
+local Game_9 = Instance.new("TextLabel")
+local Game_10 = Instance.new("TextLabel")
 local SupportedGames = Instance.new("TextButton")
 local UICorner_6 = Instance.new("UICorner")
 local MM2OptionsFrame = Instance.new("Frame")
 local UICorner_7 = Instance.new("UICorner")
-local EclipseHub = Instance.new("TextButton")
+local Vynixu = Instance.new("TextButton")
 local UICorner_8 = Instance.new("UICorner")
 local Title_2 = Instance.new("TextLabel")
 local BoltsHub = Instance.new("TextButton")
@@ -217,6 +225,45 @@ Game_7.TextScaled = true
 Game_7.TextSize = 14.000
 Game_7.TextWrapped = true
 
+Game_8.Name = "Game"
+Game_8.Parent = SupportedGameFrame
+Game_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Game_8.BackgroundTransparency = 1.000
+Game_8.Size = UDim2.new(1, 0, 0.0500000007, 0)
+Game_8.ZIndex = 2
+Game_8.Font = Enum.Font.Bangers
+Game_8.Text = "Galaxy Delta"
+Game_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+Game_8.TextScaled = true
+Game_8.TextSize = 14.000
+Game_8.TextWrapped = true
+
+Game_9.Name = "Game"
+Game_9.Parent = SupportedGameFrame
+Game_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Game_9.BackgroundTransparency = 1.000
+Game_9.Size = UDim2.new(1, 0, 0.0500000007, 0)
+Game_9.ZIndex = 2
+Game_9.Font = Enum.Font.Bangers
+Game_9.Text = "Prison Life"
+Game_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+Game_9.TextScaled = true
+Game_9.TextSize = 14.000
+Game_9.TextWrapped = true
+
+Game_10.Name = "Game"
+Game_10.Parent = SupportedGameFrame
+Game_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Game_10.BackgroundTransparency = 1.000
+Game_10.Size = UDim2.new(1, 0, 0.0500000007, 0)
+Game_10.ZIndex = 2
+Game_10.Font = Enum.Font.Bangers
+Game_10.Text = "Pilfering Pirates"
+Game_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+Game_10.TextScaled = true
+Game_10.TextSize = 14.000
+Game_10.TextWrapped = true
+
 SupportedGames.Name = "SupportedGames"
 SupportedGames.Parent = PasswordFrame
 SupportedGames.BackgroundColor3 = Color3.fromRGB(72, 0, 65)
@@ -242,20 +289,20 @@ MM2OptionsFrame.ZIndex = 4
 
 UICorner_7.Parent = MM2OptionsFrame
 
-EclipseHub.Name = "EclipseHub"
-EclipseHub.Parent = MM2OptionsFrame
-EclipseHub.BackgroundColor3 = Color3.fromRGB(72, 0, 65)
-EclipseHub.Position = UDim2.new(0.0908728838, 0, 0.300895602, 0)
-EclipseHub.Size = UDim2.new(0.296570122, 0, 0.39605099, 0)
-EclipseHub.ZIndex = 4
-EclipseHub.Modal = true
-EclipseHub.Font = Enum.Font.Arial
-EclipseHub.Text = "Vynixu"
-EclipseHub.TextColor3 = Color3.fromRGB(0, 0, 0)
-EclipseHub.TextScaled = true
-EclipseHub.TextWrapped = true
+Vynixu.Name = "Vynixu"
+Vynixu.Parent = MM2OptionsFrame
+Vynixu.BackgroundColor3 = Color3.fromRGB(72, 0, 65)
+Vynixu.Position = UDim2.new(0.0908728838, 0, 0.300895602, 0)
+Vynixu.Size = UDim2.new(0.296570122, 0, 0.39605099, 0)
+Vynixu.ZIndex = 4
+Vynixu.Modal = true
+Vynixu.Font = Enum.Font.Arial
+Vynixu.Text = "Vynixu"
+Vynixu.TextColor3 = Color3.fromRGB(0, 0, 0)
+Vynixu.TextScaled = true
+Vynixu.TextWrapped = true
 
-UICorner_8.Parent = EclipseHub
+UICorner_8.Parent = Vynixu
 
 Title_2.Name = "Title"
 Title_2.Parent = MM2OptionsFrame
@@ -455,72 +502,90 @@ Title_6.TextWrapped = true
 SupportedGameFrame.Visible = false
 
 Confirm.MouseButton1Down:Connect(function()
-	print("Yes1")
 	if Password.Text == "1234" then
-		print("Yes2")
+		PasswordFrame.Visible = false
 		if game.PlaceId == 142823291 then
-			PasswordFrame.Visible = false
 			MM2OptionsFrame.Visible = true
 			BoltsHub.MouseButton1Down:Connect(function()
 				loadstring(game:HttpGet(('https://raw.githubusercontent.com/fusiongreg/BoltsHubV5/main/MM2'),true))() 
-				BizzareHub.Enabled = false
+				BizzareHub:Destroy()
 			end)
 
-			EclipseHub.MouseButton1Down:Connect(function()
+			Vynixu.MouseButton1Down:Connect(function()
 				loadstring(game:GetObjects("rbxassetid://4001118261")[1].Source)()
-				BizzareHub.Enabled = false
+				BizzareHub:Destroy()
 			end)
 		elseif game.PlaceId == 292439477 then
-			PasswordFrame.Visible = false
 			PhantomForcesOptionsFrame.Visible = true
 			BoltsHub_2.MouseButton1Down:Connect(function()
 				loadstring(game:HttpGet(('https://raw.githubusercontent.com/fusiongreg/BoltsHubV5/main/PhantomForces'),true))()
-				BizzareHub.Enabled = false
+				BizzareHub:Destroy()
 			end)
 
 			GHub.MouseButton1Down:Connect(function()
 				loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub%27'))()
-				BizzareHub.Enabled = false
+				BizzareHub:Destroy()
 			end)
 		elseif game.PlaceId == 621129760 then
-			PasswordFrame.Visible = false
 			KatOptionsFrame.Visible = true
 			BoltsHub_3.MouseButton1Down:Connect(function()
 				loadstring(game:HttpGet(('https://raw.githubusercontent.com/fusiongreg/BoltsHubV5/main/KAT'),true))() 
-				BizzareHub.Enabled = false
+				BizzareHub:Destroy()
 			end)
 
 			Kat12.MouseButton1Down:Connect(function()
 				loadstring(game:HttpGet("https://raw.githubusercontent.com/JNHHGaming/Kat12/main/Kat"))()
-				BizzareHub.Enabled = false
+				BizzareHub:Destroy()
 			end)
 		elseif game.PlaceId == 2788229376 then
-			PasswordFrame.Visible = false
 			DaHoodOptionFrame.Visible = true
 			BoltsHub_4.MouseButton1Down:Connect(function()
 				loadstring(game:HttpGet(('https://raw.githubusercontent.com/fusiongreg/BoltsHubV5/main/Da%20Hood'),true))()  
-				BizzareHub.Enabled = false
+				BizzareHub:Destroy()
 			end)
 
 			DimagX.MouseButton1Down:Connect(function()
 				loadstring(game:HttpGet('https://raw.githubusercontent.com/Dimag16/DimagX_NEW/main/dimagx', true))()
-				BizzareHub.Enabled = false
+				BizzareHub:Destroy()
 			end)
 		elseif game.PlaceId == 6516141723 or game.GameId == 6516141723 then
 			loadstring(game:HttpGet("https://pastebin.com/raw/ZNMP76Ys"))()
-			BizzareHub.Enabled = false
+			BizzareHub:Destroy()
 		elseif game.PlaceId == 2413927524 then
 			loadstring(game:HttpGet("https://realzzhub.xyz/script.lua"))()
-			BizzareHub.Enabled = false
+			BizzareHub:Destroy()
 		elseif game.PlaceId == 4588604953 then
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/JackHiggly/RobloxThings/main/FemWare0", true))()
-			BizzareHub.Enabled = false
+			BizzareHub:Destroy()
 		elseif game.PlaceId == 286090429 then
 			loadstring(game:HttpGet(('https://raw.githubusercontent.com/fusiongreg/BoltsHubV5/main/Arsenal2'),true))()
-			BizzareHub.Enabled = false
+			BizzareHub:Destroy()
+		elseif game.PlaceId == 12426862174 then
+			BizzareHub:Destroy()
+			while true do
+				wait(10)
+				local ESP = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
+				ESP:Toggle(true)
+
+				ESP:AddObjectListener(workspace.Asteroids, {
+					Type = "Model",
+					CustomName = "Uranium",
+					Color = Color3.fromRGB(0,255,0),
+					Validator = function(obj)
+						return obj:FindFirstChild("NoRespawn")
+					end,
+					IsEnabled = "Uranium"
+				})
+				ESP.Uranium = true
+			end
+		elseif game.PlaceId == 155615604 then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Denverrz/scripts/master/PRISONWARE_v1.3.txt"))()
+		elseif game.PlaceId == 6104994594 then
+			loadstring(game:HttpGet("https://pastebin.com/qjwWSs7E"))()
 		else
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/fusiongreg/BoltsHubV5/main/Main",true))
-			BizzareHub.Enabled = false
+			Confirm.Text = "Game Not Supported"
+			wait(4)
+			BizzareHub:Destroy()
 		end
 	end
 end)
